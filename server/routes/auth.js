@@ -2,11 +2,8 @@ import express from 'express';
 
 const router = express.Router();
 
-// get post put delete
-router.get("/", (req, res) => {
-    res.json({
-      data: "hello from nodejs api from routes...",
-    });
-  });
+import * as auth from '../controllers/auth.js';
+
+router.get("/", auth.welcome);
   
   export default router
